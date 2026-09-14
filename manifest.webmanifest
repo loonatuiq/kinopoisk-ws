@@ -1,7 +1,7 @@
 {
   "name": "Kinopoisk CX",
   "short_name": "Кино .CX",
-  "description": "Поиск фильмов и сериалов с открытием ссылок на Kinopoisk.cx",
+  "description": "Поиск фильмов и сериалов с открытием ссылок на Kinopoisk.CX",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
