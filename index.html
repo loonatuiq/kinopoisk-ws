@@ -121,13 +121,13 @@
         img.onerror = () => {
           img.remove();
           const f = document.createElement("div");
-          f.className = "poster no-poster"; f.textContent = "Нет постера";
+          f.className = "poster no-poster"; f.textContent = "N/A";
           card.prepend(f);
         };
         card.appendChild(img);
       } else {
         const f = document.createElement("div");
-        f.className = "poster no-poster"; f.textContent = "Нет постера";
+        f.className = "poster no-poster"; f.textContent = "N/A";
         card.appendChild(f);
       }
 
