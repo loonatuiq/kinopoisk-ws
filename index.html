@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icons/icon.svg">
-  <title>Kinopoisk CX</title>
+  <title>Kinopoisk WS</title>
   <style>
     :root { color-scheme: dark; font-family: Arial, sans-serif; }
     * { box-sizing: border-box; }
@@ -49,7 +49,7 @@
 <main class="container">
   <header>
     <h1>Поиск фильмов и сериалов</h1>
-    <p class="subtitle">Найди фильм по названию — сервис автоматически создаст ссылку на Kinopoisk.cx.</p>
+    <p class="subtitle">Найди фильм по названию — сервис автоматически создаст ссылку на Kinopoisk.ws.</p>
   </header>
 
   <div class="search">
@@ -100,7 +100,7 @@
     return (m.isSeries === true || m.type === "series") ? "Сериал" :
            (m.type === "movie" ? "Фильм" : "");
   }
-  function cxUrl(id) { return `https://www.kinopoisk.cx/film/${encodeURIComponent(id)}/`; }
+  function wsUrl(id) { return `https://www.kinopoisk.ws/film/${encodeURIComponent(id)}/`; }
 
   function render(items) {
     results.innerHTML = "";
@@ -151,9 +151,9 @@
       }
 
       const a = document.createElement("a");
-      a.className = "open"; a.href = cxUrl(id);
+      a.className = "open"; a.href = wsUrl(id);
       a.target = "_blank"; a.rel = "noopener noreferrer";
-      a.textContent = "Открыть .cx";
+      a.textContent = "Открыть .ws";
       info.appendChild(a);
 
       card.appendChild(info);
@@ -210,7 +210,7 @@
       const u = new URL($("urlInput").value.trim());
       const h = u.hostname.toLowerCase();
       if (h !== "kinopoisk.ru" && h !== "www.kinopoisk.ru") throw new Error("Нужна ссылка на kinopoisk.ru");
-      u.hostname = "www.kinopoisk.cx";
+      u.hostname = "www.kinopoisk.ws";
       box.innerHTML = "";
       const text = document.createElement("div");
       text.textContent = u.toString();
