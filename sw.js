@@ -1,4 +1,4 @@
-const CACHE = "kinopoisk-cx-v1";
+const CACHE = "kinopoisk-ws-v1";
 const APP_SHELL = [
   "./",
   "./index.html",
