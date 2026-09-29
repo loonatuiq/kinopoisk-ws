@@ -1,0 +1,10 @@
+{
+  // Имя должно совпадать с названием проекта в Cloudflare
+  "name": "kinopoisk-ws",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  }
+}
